@@ -1,1 +1,107 @@
-hello word !
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>爱情见证</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2013-10-8,我们相爱</span><br />
+			<span class="space"/><span class="comments">*2017-01-13.我们结婚</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			男生名字 = <span class="keyword">高易平</span> <br />
+			女生名字 = <span class="keyword">晏珍</span> <br />
+			<span class="comments">// 有一种默契叫心照不宣;有一种感觉叫妙不可言; </span><br />
+			有一种幸福叫有你相伴;有一种思念叫望眼欲穿。<br />
+			<span class="comments">// 珍惜上天对你的每一种恩赐，即使是困难;</span><br />
+			珍惜人生路上的每一次相逢，哪怕是偶然。<br />
+			<span class="comments">// 因为有风，</span><br />
+			柳条得以轻扬;因为有雨，<br />
+			<span class="comments">// 禾苗得以滋长;因为有花，</span><br />
+			自然才显芬芳;因为有你，<br />
+			<span class="comments">// 生活才显阳光。宝贝，你就是我的太阳!</span><br />
+			<span class="keyword">如果</span>每个人一生只会遇到一颗流星，那么和你在一起就是我惟一的 <span class="keyword">愿望！</span>;<br />
+			<span class="keyword">喜欢，</span> 就是淡淡的爱。爱，就是深深的喜欢。我希望以后可以不用送你回家，而是我们一起回 <span class="keyword">我们的家。</span>;<br />
+			<span class="keyword">	</span> <br />
+			<span class="keyword"/>孤独的感觉如此之重，是因为想你太深。</span><br />
+			<span class="keyword"/>有个懂你的人，是最大的幸福。</span><br />
+			<span class="keyword"/>这个人，不一定十全十美，但他能读懂你，<br />
+			<span class="keyword">能走进你的心灵深处，能看懂你心里的一切。</span><br />
+			<br>
+			<br>
+			<br>
+			我想说:<br />
+			最懂你的人，总是会一直的在你身边，默默守护你，不让你受一点点的委屈。<br />
+			真正爱你的人不会说许多爱你的话，却会做许多爱你的事。<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					晏珍，这是我们相识的时光：
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					祝你永远开心。520快乐！！！<br/>
+					<div class="signature">--高易平 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2013, 10, 8);
+together.setHours(10);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 800);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 5);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both">
+</div>
+</body>
+</html>
